@@ -30,7 +30,7 @@
                     @endauth
                 </div>
             @endif
-            <h1>Laravel 10</h1>
+            <h1>Laravel 10 Desde Caracas Venezuela</h1>
                 </div>
             </div>
         </div>
