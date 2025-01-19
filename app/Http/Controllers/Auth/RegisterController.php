@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Http\Request;
+use Illuminate\Http\Auth\Request;  //revisar responde 200 ok sin validar el correo 19 01 2025
+use App\Http\Requests\Auth\RegisterRequest;
 
 class RegisterController extends Controller
 {
@@ -13,9 +14,8 @@ class RegisterController extends Controller
         $this->middleware(['guest']);      
     }
 
-    public function register(Request $request) {
-        // validar la peticion: 
-        // antes: dd('ok');
+    public function register(RegisterRequest $request) {
+
         User::create([
             'name' => $request->name,
             'email' => $request->email,
